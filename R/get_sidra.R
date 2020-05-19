@@ -398,7 +398,8 @@ get_sidra <- function(x,
 
   test1 <- try(rjson::fromJSON(path), silent=TRUE)
   
-  message(paste0("Full path -> ", path))
+  msg_path <- paste0("Full path -> ", path)
+  message(msg_path)
   if (strsplit(path, " ")[[1]][2] == "P") {
     
     stop("The 'period' argument is misspecified.")
