@@ -398,7 +398,7 @@ get_sidra <- function(x,
 
   test1 <- try(rjson::fromJSON(path), silent=TRUE)
   
-  msg_path <- paste0("Full path -> ", path)
+  msg_path <- paste0("Trace -> ", strsplit(path, " ")[[1]])
   message(msg_path)
   if (strsplit(path, " ")[[1]][2] == "P") {
     
